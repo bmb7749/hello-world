@@ -16,3 +16,7 @@ vertex(165, 130);
 vertex(20, 145);
 vertex(140, 125);
 endShape(CLOSE); 
+
+fill(#C64646);
+beginShape(); 
+vertex(30, 200);
