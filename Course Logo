@@ -8,3 +8,11 @@ vertex(170, 105);
 vertex(120, 20);
 vertex(160, 95);
 endShape(CLOSE);
+
+fill(#4569B4);
+beginShape();
+vertex(60, 75);
+vertex(165, 130);
+vertex(20, 145);
+vertex(140, 125);
+endShape(CLOSE); 
