@@ -1,0 +1,10 @@
+size(300, 260);
+smooth();
+
+fill(#4569B4);
+beginShape();
+vertex(40, 50);
+vertex(170, 105);
+vertex(120, 20);
+vertex(160, 95);
+endShape(CLOSE);
