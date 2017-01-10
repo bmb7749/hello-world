@@ -20,3 +20,31 @@ endShape(CLOSE);
 fill(#C64646);
 beginShape(); 
 vertex(30, 200);
+vertex(173, 150); 
+vertex(90, 258);
+vertex(162, 158);
+endShape(CLOSE);
+
+fill(#4569B4);
+beginShape();
+vertex(190, 135);
+vertex(260, 220);
+vertex(195, 150);
+vertex(200, 240);
+endShape(CLOSE);
+
+fill(#4569B4);
+beginShape();
+vertex(260, 150);
+vertex(200, 110); 
+vertex(257, 77);
+vertex(210, 110);
+endShape(CLOSE);
+
+fill(#C64646);
+beginShape(); 
+vertex(175, 30);
+vertex(190, 100);
+vertex(235, 60);
+vertex(195, 87);
+endShape(CLOSE);
