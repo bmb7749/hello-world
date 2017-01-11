@@ -1,0 +1,32 @@
+size(360, 260);
+smooth();
+
+fill(#D3DBAA);
+beginShape();
+vertex(220, 55);
+vertex(240, 20);
+vertex(220, 35);
+vertex(200, 38);
+endShape();
+
+fill(#D3DBAA);
+beginShape();
+vertex(140, 55);
+vertex(120, 20);
+vertex(140, 35);
+vertex(160, 38);
+endShape();
+
+fill(#76FF08);
+ellipse( 180, 120, 150, 180);
+
+fill(255);
+ellipse( 180, 80, 60, 60);
+
+fill(#00F035);
+ellipse(180, 80, 35, 35);
+
+fill(0);
+ellipse(180, 80, 22, 22);
+
+ellipse(180, 160, 80, 40);
