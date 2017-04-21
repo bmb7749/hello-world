@@ -1,0 +1,94 @@
+int x=0;
+int y=0;
+float wx;
+float wy;
+float mx;
+float my;
+float easing = 0.05;
+int radius = 24;
+int edge = 100;
+int inner = edge + radius;
+
+void setup() {
+
+size(500,500);
+smooth();
+
+
+}
+void draw() {
+  background(255);
+Monster(); 
+
+
+if (keyPressed == true && key == 'a') { //when a pressed color changes
+
+       stroke(#00FFE8);
+       } else if (keyPressed == true && key == 'd') { //when d pressed color changes
+         stroke(0,0,250);
+       }
+         else{
+         noStroke();
+         }
+}
+
+  
+void Monster() {
+  
+  translate(x,y);
+
+if(keyPressed && key == CODED ) {
+  if(keyCode == UP)
+{y=y-5;}
+  if(keyCode == DOWN)
+  {y=y+5;}
+  if(keyCode == RIGHT)
+  {x=x+5;}
+  if(keyCode == LEFT)
+{x=x-5;}
+}
+  
+fill(#FF8000);
+ellipse(150,110,250,220);
+
+fill(0);
+ellipse(80, 66, 55, 55);
+
+ellipse(220, 66, 55, 55);
+
+{ 
+  if (abs(mouseX - mx) > 0.1) {
+    mx = mx + (mouseX - mx) * easing;
+  }
+  if (abs(mouseY - my) > 0.1) {
+    my = my + (mouseY- my) * easing;
+  }
+  
+  mx = constrain(mx, 58, 100);
+  my = constrain(my, 45,84);
+  
+  
+  
+  
+   if (abs(mouseX - wx) > 0.1) {
+    wx = wx + (mouseX - wx) * easing;
+  }
+  if (abs(mouseY - wy) > 0.1) {
+    wy = wy + (mouseY- wy) * easing;
+  }
+  
+  wx = constrain(wx, 200, 245);
+  wy = constrain(wy, 45,84);
+  fill(#FF0900); //Red eyes
+ellipse(mx,my,10,10);
+
+
+ellipse(wx,wy,10,10);
+}
+
+
+fill(0); //draw mouth and nose
+noStroke();
+triangle(150, 120, 170, 140, 130, 140);
+ellipse(150, 180, 100, 40);
+}
