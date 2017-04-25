@@ -91,4 +91,10 @@ fill(0); //draw mouth and nose
 noStroke();
 triangle(150, 120, 170, 140, 130, 140);
 ellipse(150, 180, 100, 40);
+beginShape();
+vertex(140, 1);
+vertex(160, 10);
+vertex(160, 20);
+vertex(140, 20);
+endShape();
 }
