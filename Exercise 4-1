@@ -1,0 +1,20 @@
+PFont font ;
+PFont font2 ;
+
+
+void setup() {
+  size (700, 500) ;
+  background (255) ;
+  smooth() ;
+  font = loadFont ("ACaslonPro-SemiboldItalic-48.vlw") ;
+  font2 = loadFont ("AdobeDevanagari-Italic-48.vlw") ;
+}
+
+void draw() {
+  fill (#00FA0E) ;
+  textFont (font) ;
+  text ("Brandon Bargas" , 20, 100) ;
+  fill (#8800FA) ;
+  textFont (font2) ;
+  text ("Brandon Bargas" , 20, 300) ;
+}
