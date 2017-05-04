@@ -1,0 +1,101 @@
+float circleX; //brandon pong 5-4-17
+float circleY;
+float xspeed = -5;
+float yspeed = 5;
+float paddleX, paddleY, paddleW, paddleH, PaddleS;
+  boolean up;
+  PFont font;
+float timer = millis() / 1000 ;
+int counter = 0 ;
+
+void setup() {
+size(800, 800);
+circleX=random(350,550);
+circleY=random(300, 350);
+ 
+  rectMode(CENTER);
+  paddleX = 20;
+  paddleY = height/2;
+  paddleW = 20;
+  paddleH = 100;
+  PaddleS = 10;
+  
+ font = loadFont ("Kalinga-48.vlw") ;
+}
+void draw() {
+frameRate(60);
+background(#002AF2);
+displayBall();
+moveBall();
+checkEdges();
+displayPaddle();
+movePaddle();
+text();
+respawn();
+}
+  
+void displayBall() {  //any key press activates god mode
+  if (keyPressed) {
+    frameRate(250);
+  background(#002AF2);
+fill(random(255),random(255),random(255));
+stroke(255);
+ellipse(circleX, circleY, 25, 25); 
+textSize(60);
+text ("GOD MODE", 225, 400);
+  }
+ else { 
+ fill(0);
+stroke(255);
+ellipse(circleX, circleY, 25, 25);
+}}
+
+void moveBall() {
+circleX = circleX + xspeed;
+circleY = circleY + yspeed;
+}
+
+void checkEdges() {
+if (circleX > width-15) {
+xspeed = random(-8, -5);
+}
+
+if (circleY > height-15) {
+yspeed = random(-8, -5);
+}
+if (circleY < 15) {
+yspeed = random(5, 8);
+}}
+
+void displayPaddle() {
+  fill(#F20008);
+  rect(paddleX, paddleY, paddleW, paddleH);
+}
+
+void movePaddle() {
+paddleY=mouseY;
+  if ((circleX < 20 + paddleX) && (circleY > paddleY-50) && (circleY < paddleY+50)){
+xspeed = random(5, 8);
+}}
+
+void text() {
+  textSize(20);  //draws name, timer, and death count
+ text ("Brandon's Pong", 210, 35) ;
+  text ("Deaths:", 472, 34) ;
+  text (counter , 545 , 35) ; 
+  timer = millis() / 700 ;
+  text (timer, 70, 35);
+  println (timer);
+}
+
+void respawn () { 
+   if (circleX <= 5) {
+  
+      circleX = 300 ;
+      circleY = 300 ;
+         delay(400);
+      counter += 1 ;
+      timer = 0;
+      println (counter);
+    }}
+  
