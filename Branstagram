@@ -24,8 +24,8 @@ void setup() {
 }
     
    void draw() {
-    background(255,252,204);
-      font = loadFont("AGaramondPro-BoldItalic-48.vlw");
+    background(#5D07F5);
+      font = loadFont("AngsanaNew-Bold-48.vlw");
           textFont(font);
               if(mousePressed){ //buttons  
        if(mouseY > 471 && mouseY < 491 && mouseX < 370 && mouseX > 310){ // red tint 
@@ -68,7 +68,7 @@ void setup() {
       }
      
      rectMode(CORNER);
-   fill(39,101,137);  
+   fill(#F516DF);  
    rect(0,0,80, height);
    rect(width-80, 0,80, height);
           fill(68,36,23);
@@ -105,9 +105,9 @@ void setup() {
      rectMode(CENTER);
      rect(415, 470, 24, 5); //plus sign 
      rect(415, 470, 5, 24); //plus sign 
-  font2 = loadFont("AdobeGurmukhi-Bold-48.vlw"); //tile font
+  font2 = loadFont("ACaslonPro-SemiboldItalic-48.vlw"); //tile font
    textFont(font2);
-   fill(255,0,0);
+   fill(random(255),random(255),random(255));
    text("Branstagram",180, 60);
    
      imageMode(CENTER); 
